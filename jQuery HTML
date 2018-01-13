@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+
+    <style>
+        #box1{
+            height:50px;
+            background:yellow;
+        }
+        #box2{
+            height:200px;
+            background:blue;
+            /*display:none;*/
+        }
+    </style>
+
+    <script>
+       $(function(){
+           $('#box1').mouseleave(function(){
+               $('#box2').slideDown();
+           });
+       });
+    </script>
+
+    <script>
+        $(function(){
+            $('#box1').click(function(){
+                $('#box2').slideUp();
+            });
+        });
+    </script>
+
+    <script>
+
+        $(function(){
+            console.log($('h1').text());
+
+            $('button').click(function(){
+                $('h1').text('set text..');
+                $('input').val('tom');
+            });
+
+        });
+
+    </script>
+
+    <script>
+            $(function(){
+                $('button').click(function(){
+                    alert('HTML:'+$('h1').html());
+                });
+            });
+    </script>
+</head>
+<body>
+
+<div id="box1"></div>
+<div id="box2"></div>
+<h1>headine...</h1>
+<input type="text">
+<button>val</button>
+</body>
+</html>
